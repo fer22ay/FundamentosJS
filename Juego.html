@@ -106,7 +106,7 @@
     const naranja = document.getElementById('naranja');
     const verde = document.getElementById('verde');
     const btnEmpezar = document.getElementById('btnEmpezar');
-    const ULTIMO_NIVEL = 10;
+    const ULTIMO_NIVEL = 2;
 
     class Juego {
       constructor() {
@@ -228,6 +228,8 @@
           title: "Platzi!",
           text: "Felicitaciones, ganaste el juego",
           icon: "success",
+          button: false,
+          timer: 1500,
         }).then(() => {
           this.inicializar();
         })
@@ -238,6 +240,8 @@
           title: "Platzi!",
           text: "Lo lamentamos, perdiste :(",
           icon: "error",
+          button: false,
+          timer: 1500,
         }).then(() => {
           this.eliminarEventosClick();
           this.inicializar();
